@@ -1,0 +1,27 @@
+name: Copy Settings YML
+
+on:
+  pull_request:
+    types:
+    - closed
+    branches:
+      - main
+
+jobs:
+  copy-file:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Pushes test file
+      uses: dmnemec/copy_file_to_another_repo_action@main
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      with:
+        source_file: '.github/settings.yml'
+        destination_repo: 'woiten-moduscreate/settings-copy'
+        destination_folder: '.github'
+        user_email: 'michael.woiten@moduscreate.com'
+        user_name: 'woiten-moduscreate'
+        commit_message: 'Copying latest settings YML'
