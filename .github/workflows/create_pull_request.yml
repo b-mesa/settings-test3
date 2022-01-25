@@ -13,13 +13,12 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
-
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v3
       with:
         token: ${{secrets.API_TOKEN_GITHUB}}
-        commit-message: Updating .github/settings.yml
-        branch: main
+        commit-message: Updating
+        branch: dev
         delete-branch: false
         title: 'Updated settings.yml'
         body: updated settings yml
