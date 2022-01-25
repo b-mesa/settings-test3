@@ -1,7 +1,7 @@
 name: Push Settings YML
 on:
   pull_request:
-    types: [opened, closed]
+    types: [closed]
     branches:
       - main
     paths:
