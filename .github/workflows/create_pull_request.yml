@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - dev
-    paths:
-      - '.github/settings.yml'
+    #paths:
+    #  - '.github/settings.yml'
 
 jobs:
   create-pull-request:
@@ -18,11 +18,10 @@ jobs:
       with:
         token: ${{secrets.API_TOKEN_GITHUB}}
         commit-message: Updating
-        base: dev
-        branch: main
-        delete-branch: false
+        #base is the target destination
+        base: qa
+        branch: ${{ github.ref }}
         title: 'Updated settings.yml'
-        body: updated settings yml
-        assignees: woiten-moduscreate
-        reviewers: woiten-moduscreate
-        draft: false
+        body:
+          This is a PR creation
+        delete-branch: false
