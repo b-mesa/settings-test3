@@ -3,7 +3,7 @@ name: Create Pull Request
 on:
   push:
     branches:
-      - qa
+      - dev
     paths:
       - '.github/settings.yml'
 
