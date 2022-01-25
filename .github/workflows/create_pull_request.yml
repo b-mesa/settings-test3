@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - qa
-    #paths:
-    #  - '.github/settings.yml'
+    paths:
+      - '.github/settings2.yml'
 
 jobs:
   create-pull-request:
@@ -21,7 +21,7 @@ jobs:
         #base is the target destination
         base: main
         branch: ${{ github.ref }}
-        delete-branch: false
+        delete-branch: "false"
         title: 'Updated settings.yml'
         body:
           This is a PR creation
