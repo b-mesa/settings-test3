@@ -18,7 +18,8 @@ jobs:
       with:
         token: ${{secrets.API_TOKEN_GITHUB}}
         commit-message: Updating
-        branch: dev
+        base: dev
+        branch: main
         delete-branch: false
         title: 'Updated settings.yml'
         body: updated settings yml
