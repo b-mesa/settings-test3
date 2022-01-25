@@ -3,7 +3,7 @@ name: Create Pull Request
 on:
   push:
     branches:
-      - dev
+      - qa
     #paths:
     #  - '.github/settings.yml'
 
@@ -19,9 +19,9 @@ jobs:
         token: ${{secrets.API_TOKEN_GITHUB}}
         commit-message: Updating
         #base is the target destination
-        base: qa
+        base: main
         branch: ${{ github.ref }}
+        delete-branch: false
         title: 'Updated settings.yml'
         body:
           This is a PR creation
-        delete-branch: false
