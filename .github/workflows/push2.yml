@@ -21,7 +21,6 @@ jobs:
       uses: dmnemec/copy_file_to_another_repo_action@main
       env:
         API_TOKEN_GITHUB: ${{ steps.get_workflow_token.outputs.token }}
-      if: github.event.pull_request.merged
       with:
         source_file: '.github/settings2.yml'
         destination_repo: 'woiten-moduscreate/settings-copy'
