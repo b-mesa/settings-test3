@@ -25,7 +25,7 @@ jobs:
         source_file: '.github/settings2.yml'
         destination_repo: 'woiten-moduscreate/settings-copy'
         destination_branch: 'dev'
-        destination_folder: '.github'
+        destination_folder: '.github/'
         user_email: 'michael.woiten@moduscreate.com'
         user_name: 'woiten-moduscreate'
         commit_message: 'Copying latest settings YML'
