@@ -1,0 +1,32 @@
+name: Push Settings YML
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/settings2.yml'
+jobs:
+  copy-file:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Get Token
+      id: get_workflow_token
+      uses: peter-murray/workflow-application-token-action@v1
+      with:
+        application_id: ${{ secrets.APPLICATION_ID }}
+        application_private_key: ${{ secrets.APPLICATION_PRIVATE_KEY }}
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Pushes test file
+      uses: dmnemec/copy_file_to_another_repo_action@main
+      env:
+        API_TOKEN_GITHUB: ${{ steps.get_workflow_token.outputs.token }}
+      if: github.event.pull_request.merged
+      with:
+        source_file: '.github/settings2.yml'
+        destination_repo: 'woiten-moduscreate/settings-copy'
+        destination_branch: 'dev'
+        destination_folder: '.github'
+        user_email: 'michael.woiten@moduscreate.com'
+        user_name: 'woiten-moduscreate'
+        commit_message: 'Copying latest settings YML'
