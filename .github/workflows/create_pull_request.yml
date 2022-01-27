@@ -5,14 +5,15 @@ on:
       - dev
     paths:
       - '.github/settings.yml'
-permissions:
-  contents: write
-  metadata: read
-  pullrequests: write
+
 
 jobs:
   create-pull-request:
     runs-on: ubuntu-latest
+    permissions:
+    contents: write
+    metadata: read
+  pullrequests: write
     steps:
     - name: Ensure SHA Pinned Actions
       uses: zgosalvez/github-actions-ensure-sha-pinned-actions@0b552a197e44b819629237e065d781f5ca691460
