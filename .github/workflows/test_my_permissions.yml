@@ -1,8 +1,6 @@
 name: Testing Permissions
 on:
   push:
-    branches:
-      - dev
     paths:
       - 'test.txt'
       
