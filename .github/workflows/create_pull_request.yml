@@ -9,6 +9,8 @@ jobs:
   create-pull-request:
     runs-on: ubuntu-latest
     steps:
+    - name: Ensure SHA Pinned Actions
+      uses: zgosalvez/github-actions-ensure-sha-pinned-actions@0b552a197e44b819629237e065d781f5ca691460
     - name: Get Token
       id: get_workflow_token
       uses: peter-murray/workflow-application-token-action@d93504a6ff913242c1c512d97ad1f8b302000af5
