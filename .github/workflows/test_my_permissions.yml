@@ -6,8 +6,7 @@ on:
 jobs:
   Testing-Permissions:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
+    permissions: read-all
     steps:
     - name: Get Token
       id: get_workflow_token
