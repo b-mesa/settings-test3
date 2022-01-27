@@ -9,7 +9,7 @@ permissions:
   pull-requests: write
   
 jobs:
-  create-pull-request:
+  Testing-Permissions:
     runs-on: ubuntu-latest
     steps:
     - name: Get Token
