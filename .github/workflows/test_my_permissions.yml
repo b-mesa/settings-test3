@@ -4,8 +4,20 @@ on:
     paths:
       - 'test.txt'
 
-permissions: none
-
+permissions:
+  actions: none
+  checks: none
+  contents: none
+  deployments: none
+  discussions: none
+  issues: none
+  packages: none
+  pages: none
+  pull-requests: none
+  repository-projects: none
+  security-events: none
+  statuses: none
+  
 jobs:
   Testing-Permissions:
     runs-on: ubuntu-latest
