@@ -1,14 +1,12 @@
-
-name: Push Settings YML
+name: Create Pull Request
 on:
-  pull_request:
-    types: [closed]
+  push:
     branches:
-      - main
+      - dev
     paths:
       - '.github/settings.yml'
 jobs:
-  copy-file:
+  create-pull-request:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -24,16 +22,14 @@ jobs:
         application_private_key: ${{ secrets.APPLICATION_PRIVATE_KEY }}
     - name: Checkout
       uses: actions/checkout@ec3a7ce113134d7a93b817d10a8272cb61118579
-    - name: Pushes test file
-      uses: dmnemec/copy_file_to_another_repo_action@c93037aa10fa8893de271f19978c980d0c1a9b37
-      env:
-        API_TOKEN_GITHUB: ${{ steps.get_workflow_token.outputs.token }}
-      if: github.event.pull_request.merged
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@dcd5fd746d53dd8de555c0f10bca6c35628be47a
       with:
-        source_file: '.github/settings.yml'
-        destination_repo: 'woiten-moduscreate/settings-copy'
-        destination_branch: 'dev'
-        destination_folder: '.github'
-        user_email: 'michael.woiten@moduscreate.com'
-        user_name: 'woiten-moduscreate'
-        commit_message: 'Copying latest settings YML'
+        token: ${{steps.get_workflow_token.outputs.token}}
+        commit-message: Updating
+        base: main
+        branch: ${{ github.ref }}
+        delete-branch: "false"
+        title: 'Updated settings.yml'
+        body:
+          This is a PR creation
