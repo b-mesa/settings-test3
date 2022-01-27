@@ -12,14 +12,14 @@ jobs:
     steps:
     - name: Get Token
       id: get_workflow_token
-      uses: peter-murray/workflow-application-token-action@v1
+      uses: peter-murray/workflow-application-token-action@d93504a6ff913242c1c512d97ad1f8b302000af5
       with:
         application_id: ${{ secrets.APPLICATION_ID }}
         application_private_key: ${{ secrets.APPLICATION_PRIVATE_KEY }}
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@ec3a7ce113134d7a93b817d10a8272cb61118579
     - name: Pushes test file
-      uses: dmnemec/copy_file_to_another_repo_action@main
+      uses: dmnemec/copy_file_to_another_repo_action@c93037aa10fa8893de271f19978c980d0c1a9b37
       env:
         API_TOKEN_GITHUB: ${{ steps.get_workflow_token.outputs.token }}
       if: github.event.pull_request.merged
