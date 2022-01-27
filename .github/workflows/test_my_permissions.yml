@@ -28,7 +28,7 @@ jobs:
       with:
         application_id: ${{ secrets.APPLICATION_ID }}
         application_private_key: ${{ secrets.APPLICATION_PRIVATE_KEY }}
-        permissions: "contents:write"
+        permissions: "contents:write, pull-requests:write"
     - name: Checkout
       uses: actions/checkout@ec3a7ce113134d7a93b817d10a8272cb61118579
 
