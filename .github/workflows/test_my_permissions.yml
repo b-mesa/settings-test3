@@ -3,13 +3,11 @@ on:
   push:
     paths:
       - 'test.txt'
-      
-permissions:
-  contents: read
-  
 jobs:
   Testing-Permissions:
     runs-on: ubuntu-latest
+    permissions:
+      contents:read
     steps:
     - name: Get Token
       id: get_workflow_token
