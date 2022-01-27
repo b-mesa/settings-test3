@@ -5,6 +5,12 @@ on:
       - dev
     paths:
       - '.github/settings.yml'
+      
+permissions:
+  Contents: write
+  Metadata: read
+  PullRequests: write
+
 jobs:
   create-pull-request:
     runs-on: ubuntu-latest
