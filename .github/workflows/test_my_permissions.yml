@@ -3,6 +3,9 @@ on:
   push:
     paths:
       - 'test.txt'
+
+permissions: none-all
+
 jobs:
   Testing-Permissions:
     runs-on: ubuntu-latest
