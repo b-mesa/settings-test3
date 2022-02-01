@@ -56,27 +56,13 @@ repository:
 
   # Either `true` to enable automated security fixes, or `false` to disable
   # automated security fixes.
-  enable_automated_security_fixes: true
+  enable_automated_security_fixes: false
 
   # Either `true` to enable vulnerability alerts, or `false` to disable
   # vulnerability alerts.
-  enable_vulnerability_alerts: true
-
-# Labels: define labels for Issues and Pull Requests
-labels:
-  - name: bug
-    color: CC0000
-    description: An issue with the system 🐛.
-
-  - name: feature
-    # If including a `#`, make sure to wrap it with quotes!
-    color: '#336699'
-    description: New functionality.
-
-  - name: Help Wanted
-    # Provide a new name to rename an existing label
-    new_name: first-timers-only
-
+  enable_vulnerability_alerts: false
+  
+  
 # Milestones: define milestones for Issues and Pull Requests
 milestones:
   - title: milestone-title
