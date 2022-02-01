@@ -7,10 +7,10 @@ repository:
   #name: repo-name
 
   # A short description of the repository that will show up on GitHub
-  description: my new description
+  #description: my new description
 
   # A URL with more information about the repository
-  homepage: https://myhomepage.com
+  #homepage: https://myhomepage.com
 
   # A comma-separated list of topics to set on the repository
   topics: github, probot
