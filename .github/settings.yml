@@ -11,7 +11,7 @@ branches:
       required_pull_request_reviews:
         required_approving_review_count: 2
         #dismiss_stale_reviews - does not work, breaks the protection settings
-        #dismiss_stale_reviews: false
+        dismiss_stale_reviews: false
         require_code_owner_reviews: true
       required_status_checks: null
       restrictions: null
