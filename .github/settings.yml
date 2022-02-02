@@ -8,24 +8,19 @@ branches:
   - name: main
     protection:
       required_pull_request_reviews:
-        required_approving_review_count: 1
-        #dismiss_stale_reviews: true
-        #require_code_owner_reviews: false
-        #dismissal_restrictions: {}
+        required_approving_review_count: 2
+        dismiss_stale_reviews: true
+        require_code_owner_reviews: false
+        dismissal_restrictions: {}
 
-      #required_status_checks:
-      #  strict: true
-      #  contexts:
-      #    - build (8)
-      #    - build (11)
-      #    - build (14)
-      #    - license/cla
-      #enforce_admins: null
+      required_status_checks:
+        strict: null
+        contexts: null
+      enforce_admins: null
 
-      #required_linear_history: true
+      required_linear_history: null
 
-      #restrictions:
-      #  users:
-      #    - micronaut-build
-      #  apps: []
-      #  teams: []
+      restrictions:
+        users: []
+        apps: []
+        teams: []
