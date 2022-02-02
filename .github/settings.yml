@@ -4,23 +4,14 @@ repository:
   allow_merge_commit: false
   allow_rebase_merge: false
   has_issues: true
-branches:
-  - name: main
-    protection:
-      required_pull_request_reviews:
-        required_approving_review_count: 2
-        dismiss_stale_reviews: true
-        require_code_owner_reviews: false
-        dismissal_restrictions: {}
-
-      required_status_checks:
-        strict: null
-        contexts: null
-      enforce_admins: null
-
-      required_linear_history: null
-
-      restrictions:
-        users: []
-        apps: []
-        teams: []
+protected_branches:
+  main:
+    required_status_checks:
+      strict: false
+      contexts:
+        - concourse-ci/build-rhel-7-debug
+    required_pull_request_reviews:
+      dismiss_stale_reviews: false
+      require_code_owner_reviews: false
+      required_approving_review_count: 0
+    required_signatures: false
