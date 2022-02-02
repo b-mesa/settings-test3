@@ -8,6 +8,10 @@ repository:
 branches:
   - name: main
     protection:
-      required_pull_request_reviews:
-        required_approving_review_count: 2
-        dismiss_stale_reviews: false
+      required_pull_request_reviews: null
+      required_status_checks: null
+      restrictions: null
+      enforce_admins: true
+teams:
+  - name: maintainers
+    permission: push
