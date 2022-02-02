@@ -13,7 +13,7 @@ branches:
         #dismiss_stale_reviews - does not work, breaks the protection settings
         #dismiss_stale_reviews: false
         require_code_owner_reviews: false
-        dismissal_restrictions: {}
+        #dismissal_restrictions: {}
       required_status_checks: null
       restrictions: null
       enforce_admins: false
