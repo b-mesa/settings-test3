@@ -7,7 +7,7 @@ branches:
         dismiss_stale_reviews: true
         require_code_owner_reviews: true
         dismissal_restrictions:
-          users: []
+          users: null
           teams:
             - leads
       required_status_checks: null
