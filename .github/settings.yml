@@ -6,7 +6,7 @@ branches:
         required_approving_review_count: 2
         dismiss_stale_reviews: true
         require_code_owner_reviews: false
-        dismissal_restrictions: {}
+        dismissal_restrictions: []
 
       required_status_checks: null
       enforce_admins: null
