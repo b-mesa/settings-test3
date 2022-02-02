@@ -17,5 +17,5 @@ branches:
         strict: true
         contexts: []
       #restrictions: null
-      enforce_admins: true
+      #enforce_admins: true
 #
