@@ -9,7 +9,7 @@ repository:
         # The number of approvals required. (1-6)
         required_approving_review_count: 2
         # Dismiss approved reviews automatically when a new commit is pushed.
-        dismiss_stale_reviews: true
+        dismiss_stale_reviews: false
       required_status_checks: null
       restrictions: null
       enforce_admins: null
