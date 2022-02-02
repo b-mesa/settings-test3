@@ -15,7 +15,7 @@ branches:
         require_code_owner_reviews: false
         dismissal_restrictions:
           users:
-            - woiten-moduscreate
+            - @woiten-moduscreate
           teams: []
       required_status_checks: null
       restrictions: null
