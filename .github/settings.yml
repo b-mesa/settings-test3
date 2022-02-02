@@ -20,9 +20,9 @@ branches:
           - build (11)
           - build (14)
           - license/cla
-      enforce_admins: null
+      #enforce_admins: null
 
-      required_linear_history: true
+      #required_linear_history: true
 
       #restrictions:
       #  users:
