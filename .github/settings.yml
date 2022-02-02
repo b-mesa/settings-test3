@@ -1,18 +1,29 @@
 repository:
 branches:
   - name: master
-  protection:
-    required_pull_request_reviews:
-      required_approving_review_count: 1
+    protection:
+      required_pull_request_reviews:
+        required_approving_review_count: 2
         dismiss_stale_reviews: true
-        require_code_owner_reviews: true
-        dismissal_restrictions:
-          users: null
-          teams:
-            - leads
-      required_status_checks: null
-      restrictions: null
-      enforce_admins: true
+        require_code_owner_reviews: false
+        dismissal_restrictions: {}
+
+      required_status_checks:
+        strict: true
+        contexts:
+          - build (8)
+          - build (11)
+          - build (14)
+          - license/cla
+      enforce_admins: null
+
+      required_linear_history: true
+
+      restrictions:
+        users:
+          - micronaut-build
+        apps: []
+        teams: []
 
   # See https://docs.github.com/en/rest/reference/repos#update-a-repository for all available settings.
 
