@@ -10,9 +10,6 @@ repository:
         required_approving_review_count: 2
         # Dismiss approved reviews automatically when a new commit is pushed.
         dismiss_stale_reviews: false
-      required_status_checks: null
-      restrictions: null
-      enforce_admins: null
 
   # See https://docs.github.com/en/rest/reference/repos#update-a-repository for all available settings.
 
