@@ -3,8 +3,8 @@ repository:
   allow_squash_merge: true
   allow_merge_commit: false
   allow_rebase_merge: false
-  has_issues: false
-protected_branches:
+  has_issues: true
+branches:
   - name: main
     protection:
       required_pull_request_reviews:
